@@ -1,0 +1,16 @@
+<h1>Todo List App</h1>
+<!-- Loops through the items in the database-->
+{% for todo in all_todos %}
+
+<!-- Prints to the webpage the task items that it find for this loop -->
+{{ todo.task }}
+<!-- Checks if the item in the task has been completed (Is True)-->
+{% if todo.completed %}
+<!-- Currently this is not putting anything on website. Could be an error in code. -->
+<p> This is completed! </p>
+<!-- End if statement-->
+{% endif %}
+<!-- break -->
+<br>
+<!-- Ends for loop -->
+{% endfor %}

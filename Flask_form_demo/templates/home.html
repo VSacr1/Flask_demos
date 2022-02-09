@@ -1,0 +1,36 @@
+<html> 
+    <head> 
+        <title> Simple Form </title>
+    </head>
+    <body> 
+        <div class="form">
+            <!-- Indicating the form method is going to be a POST-->
+            <form method='POST' action=''>
+                <!-- This is needed in the file. Due to security -->
+                {{ form.hidden_tag() }}
+                <!-- label and value | What will show on page is first name [        ] -->
+                {{ form.first_name.label}} {{ form.first_name }}
+
+                <br> 
+
+                {{ form.last_name.label }} {{ form.last_name }}
+
+                <br> 
+
+                {{ form.date_of_birth.label }} {{ form.date_of_birth }}
+
+                <br>
+                {{ form.luckyNumber.label }} {{ form.luckyNumber }}
+
+                <br> 
+                {{ form.food.label }} {{ form.food }}
+                <!-- Submit button that will put data in the database once its coded to -->
+                {{ form.submit }}
+
+                <br> 
+
+                {{ message }}
+            </form>
+        </div>
+    </body>
+</html>
